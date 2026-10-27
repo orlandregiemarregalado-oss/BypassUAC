@@ -1,1 +1,9 @@
 cmd /min /C "set __COMPAT_LAYER=RUNASINVOKER && start "" "%1""
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\*\shell\forcerunasinvoker]
+@="Run without privilege elevation"
+
+[HKEY_CLASSES_ROOT\*\shell\forcerunasinvoker\command]
+@="cmd /min /C \"set __COMPAT_LAYER=RUNASINVOKER && start \"\" \"%1\"\"
+cmd /min /C "set __COMPAT_LAYER=RUNASINVOKER && start "" %1"
